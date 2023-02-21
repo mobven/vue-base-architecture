@@ -40,3 +40,9 @@ export default class Home extends Vue {
   }
 }
 </script>
+
+<style lang="scss">
+body {
+  background-color: $lily-white;
+}
+</style>

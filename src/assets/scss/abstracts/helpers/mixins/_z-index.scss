@@ -1,0 +1,21 @@
+$z-layer: (
+  "basement": -1,
+  "ground-floor": 0,
+  "middle-floor": 1,
+  "penthouse": 2
+);
+
+@function select-layer($layer){
+  @return map-get($z-layer , $layer);
+}
+
+@mixin z-index($layer){
+  z-index: select-layer($layer);
+}
+
+/*
+    Örnek;
+    p {
+        @include z-index("basement");
+    }
+*/

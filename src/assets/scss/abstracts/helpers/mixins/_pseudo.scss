@@ -1,0 +1,16 @@
+@mixin pseudo($display: block, $position: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $position;
+}
+
+/*
+    Örnek;
+    div::after {
+        @include pseudo; // @include pseudo(inline-flex);
+        top: 0;
+        left: 0;
+        width: 40px; 
+        height: 40px;
+    }
+*/

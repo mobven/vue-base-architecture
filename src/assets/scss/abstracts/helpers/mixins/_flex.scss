@@ -1,0 +1,12 @@
+@mixin flex($direction, $wrapType, $justify, $align: center) {
+    display: flex;
+    flex-flow: $direction $wrapType;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+/*
+    Örnek;
+    @include flex(column, nowrap, space-between, flex-start);
+    @include flex(column, nowrap, space-between);
+*/

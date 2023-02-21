@@ -1,0 +1,44 @@
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@mixin portrait() {
+    @media only screen and (min-width: 600px) {
+        @content;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@mixin tablet() {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@mixin desktop() {
+    @media only screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@mixin large-desktop() {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+/*
+    Örnek;
+    @include portrait() {
+        background: blue;
+    }
+    @include tablet() {
+        background: yellow;
+    }
+    @include desktop() {
+        background: orange;
+    }
+    @include large-desktop() {
+        background: pink;
+    }
+*/

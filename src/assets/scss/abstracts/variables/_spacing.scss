@@ -1,0 +1,42 @@
+/*
+  Spacing Convention:
+    .[breakpoint][property]-[value]
+    m : margin
+    p : padding
+    l : left
+    r : right
+    t : top
+    b : bottom
+    a : all
+*/
+
+$spacing: 0, 5, 10, 15, 20, 25, 30;
+$unit: px; // unit eg: em, pt, %
+
+$directions:(
+  l: left,
+  t: top,
+  r: right,
+  b: bottom
+);
+
+@mixin generateSpacing($prop, $short) {
+   @each $space in $spacing {
+    .#{$short}a-#{$space} { #{$prop}: $space + $unit}
+    @each $key,$val in $directions {
+      .#{$short}#{$key}-#{$space} {
+        #{$prop}-#{$val}: $space + $unit;
+      }
+    }
+  }
+}
+
+@include generateSpacing(padding , p);
+@include generateSpacing(margin , m);
+
+/*
+    Örnek;
+    class="mt-5"
+    class="mb-10 pb-15"
+    class="ml-20 pt-10 pr-20"
+*/

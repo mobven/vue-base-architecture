@@ -1,0 +1,9 @@
+@mixin rounded($radius: 0.5em) {
+    border-radius: $radius;
+}
+
+/*
+    Örnek;
+    @include rounded;
+    @include rounded(20px);
+*/

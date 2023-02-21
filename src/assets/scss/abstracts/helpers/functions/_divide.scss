@@ -1,0 +1,12 @@
+// Function
+@function divide($num) {
+    @return $num / 2;
+}
+
+/*
+    Örnek;
+    .box {
+        width: $element-width;
+        height: divide($element-width);
+    }
+*/

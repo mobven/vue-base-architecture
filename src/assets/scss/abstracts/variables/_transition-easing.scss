@@ -1,0 +1,13 @@
+$ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+$ease-in-quint: cubic-bezier(0.64, 0, 0.78, 0);
+$ease-in-out-quint: cubic-bezier(0.83, 0, 0.17, 1);
+
+$fade-easing: $ease-out-quint;
+$entrance-easing: $ease-out-quint;
+$exit-easing: $ease-in-quint;
+
+/*
+    Örnek;
+    transition: width 2s;
+    transition-timing-function: $entrance-easing;
+*/

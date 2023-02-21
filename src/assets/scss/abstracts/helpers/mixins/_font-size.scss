@@ -1,0 +1,16 @@
+@function px2rem($px) {
+    @return $px / $base-font-size * 1rem;
+}
+
+@mixin font-size($px, $line-height: false) {
+    font-size: px2rem($px);
+    @if ($line-height !=false) {
+        line-height: px2rem($line-height);
+    }
+}
+
+/*
+	Örnek;
+	@include font-size(20px);
+	@include font-size(20px, 28px);
+*/

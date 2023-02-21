@@ -1,0 +1,12 @@
+@mixin font-face($filename, $weight: normal, $style: normal) {
+    font-family: $filename;
+    font-weight: $weight;
+    font-style: $style;
+    src: url('~@/assets/fonts/woff/#{$filename}.woff') format("woff");
+}
+
+/*
+    Örnek;
+    @include font-face('Poppins');
+    @include font-face('Poppins', 500, italic);
+*/

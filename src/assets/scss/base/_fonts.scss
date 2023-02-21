@@ -1,0 +1,21 @@
+$primary-font: Poppins;
+
+@font-face {
+  @include font-face(#{$primary-font + '-Thin'}, 200);
+}
+
+@font-face {
+  @include font-face(#{$primary-font + '-Regular'}, 400);
+}
+
+@font-face {
+  @include font-face(#{$primary-font + '-Medium'}, 500);
+}
+
+@font-face {
+  @include font-face(#{$primary-font + '-SemiBold'}, 600);
+}
+
+@font-face {
+  @include font-face(#{$primary-font + '-Bold'}, 700);
+}

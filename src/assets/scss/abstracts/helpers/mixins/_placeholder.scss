@@ -1,0 +1,10 @@
+@mixin placeholder {
+    &.placeholder { @content; }
+}
+
+/*
+    Örnek;
+    @include placeholder {
+        color: $grey;
+    }
+*/

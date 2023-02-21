@@ -1,0 +1,10 @@
+@mixin opacity($color: #000, $opacity: 0.5) {
+	background-color: rgba($color, $opacity);
+}
+
+/*
+	Örnek;
+	@include opacity;
+	@include opacity(red);
+	@include opacity(gray, .6);
+*/

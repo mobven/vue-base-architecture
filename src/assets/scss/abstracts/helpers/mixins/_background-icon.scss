@@ -1,0 +1,22 @@
+/*
+    h : horizantal
+    v : vertical
+    ext: extension
+    size: width/height
+    name: filename
+    background: background color
+*/
+
+@mixin background-icon($name, $size: 30px, $v: 50%, $h: 50%, $ext: svg, $background: transparent) {
+    background: no-repeat $v $h/#{$size} $background url('@/assets/images/icons/#{$name}.#{$ext}');
+}
+
+/*
+    Örnek;
+    background-icon(search);
+    background-icon(search, 20px);
+    background-icon(search, 10px, 10px);
+    background-icon(search, 22px, 10px, 10px, png);
+    background-icon(search, 18px, calc(180px - 30px), 50%);
+    background-icon(search, 20px, calc(180px - 30px), 50%, png, lightgray);
+*/

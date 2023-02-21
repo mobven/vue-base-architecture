@@ -1,0 +1,8 @@
+@mixin transition($type, $duration) {
+    transition: $type $duration;
+}
+
+/*
+    Örnek;
+    @include transition(ease-in, 300ms);
+*/

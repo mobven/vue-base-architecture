@@ -1,0 +1,70 @@
+.header {
+    height: 60px;
+    width: 100%;
+    background-color: $white;
+    box-shadow: 1px 2px 8px rgba($black, 0.15);
+    @include z-index("ground-floor");
+  }
+  .navigation {
+    height: 60px;
+    width: 100%;
+    font-family: $primary-font;
+    @include flex(row, nowrap, space-between, center);
+    &__logo {
+      cursor: pointer;
+    }
+    &-list {
+      @include flex(row, nowrap, space-between, center);
+      &__item {
+        list-style: none;
+        margin-right: 20px;
+        cursor: pointer;
+        & a {
+          font-family: Arial;
+          text-decoration: none;
+          color: $black;
+          font-weight: $medium;
+        }
+      }
+    }
+  }
+  .search {
+    width: 50%;
+    position: relative;
+  
+    &-input {
+      width: 100%;
+      padding: 10px 8px;
+      @include border(1, solid, #c2c2c2);
+      border-radius: 3px;
+      outline: none;
+      text-transform: capitalize;
+    }
+  
+    &-result {
+      position: absolute;
+      top: 35px;
+      left: 0;
+      right: 0;
+      background-color: $white;
+      @include border(1, solid, #c2c2c2);
+      border-radius: 0 0 3px 3px;
+  
+      &__item {
+        display: inline-block;
+        font-family: Arial;
+        width: 100%;
+        color: $brown;
+        cursor: pointer;
+        padding: 10px;
+        @include transition(ease-in, 0.3s);
+        @include font-size(14px);
+        &:not(:last-child) {
+          border-bottom: 1px solid $silver;
+        }
+        &:hover {
+          background-color: $silver;
+        }
+      }
+    }
+  }

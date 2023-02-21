@@ -1,0 +1,9 @@
+@mixin border($height: 1, $type: solid, $color: #000) {
+    border: #{$height}px $type $color;
+}
+
+/*
+    Örnek;
+    @include border;
+    @include border(1, solid, red);
+*/
