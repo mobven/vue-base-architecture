@@ -1,5 +1,4 @@
 {
-  
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
@@ -12,14 +11,9 @@
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "paths": {
-      "@/*": [
-          "./src/*"
-      ],
-      "~/*": [
-          "./src/*"
-      ]
-  },
-    
+      "@/*": ["./src/*"],
+      "~/*": ["./src/*"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

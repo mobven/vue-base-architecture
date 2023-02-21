@@ -7,8 +7,15 @@
     background: background color
 */
 
-@mixin background-icon($name, $size: 30px, $v: 50%, $h: 50%, $ext: svg, $background: transparent) {
-    background: no-repeat $v $h/#{$size} $background url('@/assets/images/icons/#{$name}.#{$ext}');
+@mixin background-icon(
+  $name,
+  $size: 30px,
+  $v: 50%,
+  $h: 50%,
+  $ext: svg,
+  $background: transparent
+) {
+  background: no-repeat $v $h/#{$size} $background url("@/assets/images/icons/#{$name}.#{$ext}");
 }
 
 /*

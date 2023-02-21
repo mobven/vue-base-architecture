@@ -1,5 +1,5 @@
 @mixin border($height: 1, $type: solid, $color: #000) {
-    border: #{$height}px $type $color;
+  border: #{$height}px $type $color;
 }
 
 /*

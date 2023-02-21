@@ -1,12 +1,12 @@
 @function px2rem($px) {
-    @return $px / $base-font-size * 1rem;
+  @return $px / $base-font-size * 1rem;
 }
 
 @mixin font-size($px, $line-height: false) {
-    font-size: px2rem($px);
-    @if ($line-height !=false) {
-        line-height: px2rem($line-height);
-    }
+  font-size: px2rem($px);
+  @if ($line-height !=false) {
+    line-height: px2rem($line-height);
+  }
 }
 
 /*

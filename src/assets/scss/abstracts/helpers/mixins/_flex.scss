@@ -1,8 +1,8 @@
 @mixin flex($direction, $wrapType, $justify, $align: center) {
-    display: flex;
-    flex-flow: $direction $wrapType;
-    justify-content: $justify;
-    align-items: $align;
+  display: flex;
+  flex-flow: $direction $wrapType;
+  justify-content: $justify;
+  align-items: $align;
 }
 
 /*

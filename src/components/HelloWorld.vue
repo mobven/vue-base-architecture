@@ -48,6 +48,7 @@ export default class HelloWorld extends Vue {
   @Prop({ type: String, required: true }) readonly msg!: string;
 
   // mapActions Types
+  // eslint-disable-next-line no-unused-vars
   changeTheme!: (theme: string) => void;
 
   // mapGetters Types

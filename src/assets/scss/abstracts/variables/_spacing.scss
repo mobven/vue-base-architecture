@@ -13,17 +13,19 @@
 $spacing: 0, 5, 10, 15, 20, 25, 30;
 $unit: px; // unit eg: em, pt, %
 
-$directions:(
+$directions: (
   l: left,
   t: top,
   r: right,
-  b: bottom
+  b: bottom,
 );
 
 @mixin generateSpacing($prop, $short) {
-   @each $space in $spacing {
-    .#{$short}a-#{$space} { #{$prop}: $space + $unit}
-    @each $key,$val in $directions {
+  @each $space in $spacing {
+    .#{$short}a-#{$space} {
+      #{$prop}: $space + $unit;
+    }
+    @each $key, $val in $directions {
       .#{$short}#{$key}-#{$space} {
         #{$prop}-#{$val}: $space + $unit;
       }
@@ -31,8 +33,8 @@ $directions:(
   }
 }
 
-@include generateSpacing(padding , p);
-@include generateSpacing(margin , m);
+@include generateSpacing(padding, p);
+@include generateSpacing(margin, m);
 
 /*
     Örnek;
