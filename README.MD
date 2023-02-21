@@ -1,6 +1,7 @@
-# Vue 2 + Typescript + Vite
+# Vue 3 + Typescript + Vite + SCSS + Tailwind
 
-This template should help get you started developing with Vue 2 and Typescript in Vite.
+This template should help get you started developing with Vue 3 and Typescript in Vite.
+You can use both options api and composition api together.
 
 ## Recommended IDE Setup
 
