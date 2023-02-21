@@ -6,11 +6,8 @@ const path = require("path");
 export default defineConfig({
   plugins: [createVuePlugin()],
   resolve: {
-    alias: [
-      {
-        find: /^@\/(.+)/,
-        replacement: path.resolve(path.resolve(__dirname), "src") + "/$1",
-      },
-    ],
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
   },
 });

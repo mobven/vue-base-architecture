@@ -12,5 +12,11 @@ import HelloWorld from "@/components/HelloWorld.vue";
     HelloWorld,
   },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  mounted() {
+    this.$axios.get("/todos/1").then((res: any) => {
+      console.log(res);
+    });
+  }
+}
 </script>
