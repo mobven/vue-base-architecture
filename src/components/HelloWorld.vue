@@ -33,11 +33,11 @@
 </template>
 
 <script lang="ts">
-export default {
-  name: "HelloWorld",
+import Vue, { PropType } from "vue";
+export default Vue.extend({
   props: {
     msg: {
-      type: String,
+      type: String as PropType<string>,
       required: true,
     },
   },
@@ -46,7 +46,7 @@ export default {
       count: 0,
     };
   },
-};
+});
 </script>
 
 <style scoped>
