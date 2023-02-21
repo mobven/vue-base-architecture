@@ -14,8 +14,6 @@
       </a>
     </p>
 
-    <p>See <code>README.md</code> for more information.</p>
-
     <p>
       <a href="https://vitejs.dev/guide/features.html" target="_blank">
         Vite Docs
@@ -25,28 +23,44 @@
     </p>
 
     <button type="button" @click="count++">count is: {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test hot module replacement.
-    </p>
+    <br /><br />
+    <button type="button" @click="updateTheme">theme is {{ theme }}</button>
   </div>
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from "vue";
-export default Vue.extend({
-  props: {
-    msg: {
-      type: String as PropType<string>,
-      required: true,
-    },
+import { Component, Prop, Vue } from "vue-property-decorator";
+import { mapActions, mapGetters } from "vuex";
+@Component({
+  methods: {
+    ...mapActions({
+      changeTheme: "ThemeModule/changeTheme",
+    }),
   },
-  data() {
-    return {
-      count: 0,
-    };
+  computed: {
+    ...mapGetters({
+      theme: "ThemeModule/theme",
+    }),
   },
-});
+})
+export default class HelloWorld extends Vue {
+  // Props
+  @Prop({ type: String, required: true }) readonly msg!: string;
+
+  // mapActions Types
+  changeTheme!: (theme: string) => void;
+
+  // mapGetters Types
+  theme!: string;
+
+  // data
+  count: number = 0;
+
+  //methods
+  updateTheme() {
+    this.changeTheme(this.theme === "dark" ? "light" : "dark");
+  }
+}
 </script>
 
 <style scoped>
