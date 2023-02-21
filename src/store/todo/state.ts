@@ -1,5 +1,5 @@
-import { TodoState } from "../types";
-const state: TodoState = {
-  todos: [],
+import { Todo } from "@/models/todo";
+export const state = {
+  todos: [] as Todo[],
 };
-export default state;
+export type State = typeof state;

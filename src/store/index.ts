@@ -1,9 +1,8 @@
 import { createStore } from "vuex";
 import ThemeModule from "./theme";
 import TodoModule from "./todo";
-import { RootState } from "./types";
 
-export default createStore<RootState>({
+export default createStore({
   modules: {
     theme: ThemeModule,
     todo: TodoModule,

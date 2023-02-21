@@ -1,6 +1,5 @@
-import { ThemeState } from "../types";
-
-const state: ThemeState = {
-  theme: "light",
+export const state = {
+  theme: "light" as "light" | "dark",
 };
-export default state;
+
+export type State = typeof state;

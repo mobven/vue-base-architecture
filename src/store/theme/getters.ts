@@ -1,7 +1,14 @@
-import { ThemeState } from "../types";
+import type { GetterTree } from "vuex";
+import type { State } from "./state";
 
-const getters = {
-  theme: (state: ThemeState) => state.theme,
+export enum GetterMethods {
+  getTheme = "getTheme",
+}
+
+export type Getters = {
+  [GetterMethods.getTheme](state: State): () => string;
 };
 
-export default getters;
+export const getters: GetterTree<State, State> & Getters = {
+  [GetterMethods.getTheme]: (state) => () => state.theme,
+};

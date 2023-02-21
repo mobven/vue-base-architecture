@@ -1,7 +1,17 @@
-import { TodoState } from "../types";
+import { Todo } from "@/models/todo";
+import type { GetterTree } from "vuex";
+import type { State } from "./state";
 
-const getters = {
-  todos: (state: TodoState) => state.todos,
+export enum GetterMethods {
+  getTodos = "getTodos",
+}
+
+export type Getters = {
+  [GetterMethods.getTodos](state: State): () => Todo[];
 };
 
-export default getters;
+export const getters: GetterTree<State, State> & Getters = {
+  [GetterMethods.getTodos]: (state) => () => {
+    return state.todos;
+  },
+};
