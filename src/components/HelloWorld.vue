@@ -26,7 +26,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>
+  <div class="bg-red-50">
     <h1>{{ msg }}</h1>
     <div>
       <p>
