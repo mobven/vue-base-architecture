@@ -26,8 +26,10 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>
-    <h1 class="mb-10">{{ msg }}</h1>
+  <div class="mt-10">
+    <h1 class="mb-10 text-2xl font-bold text-black dark:text-white">
+      {{ msg }}
+    </h1>
     <div class="mb-10">
       <button @click="count++">count is: {{ count }}</button>
     </div>

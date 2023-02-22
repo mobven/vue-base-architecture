@@ -1,10 +1,3 @@
-<template>
-  <div id="app">
-    <HelloWorld msg="Hello Vue 2 + TypeScript + Vite" />
-    <button @click="updateTheme">Change Theme : {{ currentTheme }}</button>
-  </div>
-</template>
-
 <script lang="ts">
 import { defineComponent } from "vue";
 import { mapActions, mapGetters } from "vuex";
@@ -38,8 +31,15 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss">
-body {
-  background-color: $lily-white;
-}
-</style>
+<template>
+  <div id="app">
+    <div class="wrapper fixed w-full h-full top-0 bg-white dark:bg-black">
+      <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+      <button @click="updateTheme">
+        💡 Change Theme : {{ currentTheme.toUpperCase() }}
+      </button>
+    </div>
+  </div>
+</template>
+
+<style lang="scss"></style>

@@ -11,6 +11,8 @@ export interface Mutations<S = State> {
 
 export const mutations: MutationTree<State> & Mutations = {
   [MutationMethods.setTheme](state, result) {
+    document.body.classList.remove(state.theme);
+    document.body.classList.add(result);
     state.theme = result;
   },
 };
