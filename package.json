@@ -8,7 +8,8 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "format": "prettier .  --write",
-    "test": "jest src"
+    "test": "jest src",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +24,7 @@
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-vue": "^9.9.0",
+    "husky": "^8.0.0",
     "jest": "^26.6.3",
     "postcss": "^8.4.21",
     "prettier": "2.8.4",
