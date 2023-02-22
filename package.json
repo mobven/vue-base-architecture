@@ -9,7 +9,8 @@
     "serve": "vite preview",
     "format": "prettier .  --write",
     "test": "jest src",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "allow-husky": "chmod +x .husky/*"
   },
   "author": "",
   "license": "ISC",
