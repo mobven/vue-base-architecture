@@ -34,7 +34,7 @@ export default defineComponent({
 <template>
   <div id="app">
     <div class="wrapper fixed w-full h-full top-0 bg-white dark:bg-black">
-      <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+      <HelloWorld msg="Hello Vue 3 + TypeScript + Vite Edit" />
       <button @click="updateTheme">
         💡 Change Theme : {{ currentTheme.toUpperCase() }}
       </button>
