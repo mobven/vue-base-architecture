@@ -30,7 +30,6 @@ export default defineComponent({
   },
 });
 </script>
-
 <template>
   <button type="button" :class="type" :disabled="disabled" @click="onClick">
     {{ text }}
