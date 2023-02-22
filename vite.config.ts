@@ -10,6 +10,13 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
+  build: {
+    rollupOptions: {
+      input: {
+        app: "./public/index.html",
+      },
+    },
+  },
   css: {
     preprocessorOptions: {
       scss: {
