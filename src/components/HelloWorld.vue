@@ -27,7 +27,7 @@ export default defineComponent({
 
 <template>
   <div class="mt-10">
-    <h1 class="mb-10 text-2xl font-bold text-black dark:text-white">
+    <h1 class="mb-10 text-3xl font-extrabold text-black dark:text-white">
       {{ msg }}
     </h1>
     <div class="mb-10">

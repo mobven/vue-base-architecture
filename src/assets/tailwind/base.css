@@ -9,5 +9,6 @@ button {
     font-bold
     py-2
     px-4
+    shadow-lg
     rounded;
 }
