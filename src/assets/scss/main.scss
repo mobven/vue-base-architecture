@@ -1,8 +1,7 @@
 // Base
-@import "./base/initial.scss";
+@import "./base";
 
 // Abstracts
-@import "./abstracts/helpers/initial";
-@import "./abstracts/variables/initial.scss";
+@import "./abstracts";
 @import "./base/fonts";
-@import "./components/initial.scss";
+@import "./components";
